@@ -1,0 +1,16 @@
+Homepage handwriting credits
+
+Latin outlines: Mrs Saint Delafield by Alejandro Paul (Sudtipos), supplied in
+Signature — Originkit. Based on Signature by Harsh Jadhav (Componentry), MIT.
+Font license: /assets/handwriting/OFL-MrsSaintDelafield.txt
+
+Chinese outlines and stroke medians: Hanzi Writer Data / Make Me A Hanzi.
+https://github.com/chanind/hanzi-writer-data
+https://github.com/skishore/makemeahanzi
+Copyright (C) 1999 Arphic Technology Co., Ltd.
+Chinese outline license: /assets/handwriting/ARPHICPL.txt
+
+On 2026-11-17, unchanged Latin glyph outlines were selected for the words
+"Zoe's diary" and "Field Notes" and bundled into /signature.js. The native SVG
+renderer scales and reveals these outlines using masks. Earlier Chinese stroke
+data remains in the source under the Arphic Public License. No warranty is given.

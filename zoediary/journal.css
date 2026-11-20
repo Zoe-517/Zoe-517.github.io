@@ -1,0 +1,210 @@
+/* Photographic chapter covers retain the existing vertical navigation. */
+.cover-with-photo { position: relative; display: flex; color: #18395f; isolation: isolate; background: #f5f7fc; border: 1px solid #fff; border-radius: inherit; }
+.cover-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.cover-with-photo::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #ffffff35, #ffffff08); border-radius: inherit; }
+.cover-copy { width: min(590px, 64%); padding: clamp(22px, 3vw, 38px); border: 1px solid #ffffffd9; border-radius: 28px; background: linear-gradient(140deg, #ffffffb8, #ffffff82); backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px); box-shadow: 0 8px 30px #18395f0d; }
+.cover-copy > small { display: block; color: #697c94; font-size: 11px; letter-spacing: .18em; margin-bottom: 20px; }
+.cover-with-photo h2 { font-size: clamp(38px, 5.8vw, 76px); letter-spacing: -.035em; color: #18395f; margin-bottom: 8px; }
+.cover-copy > span { display: block; font: italic clamp(23px, 3vw, 36px)/1.2 Georgia, serif; color: #4d6889; margin-bottom: 20px; }
+.cover-with-photo p { max-width: 35ch; color: #3c5778; margin-bottom: 20px; }
+.cover-with-photo button { border: 1px solid #fff; color: #18395f; background: #ffffff83; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.cover-with-photo button:hover { background: #ffffffe3; }
+.cover-with-photo button:focus-visible { outline-color: #18395f; }
+.cover-edit { display: inline-block; font-size: 12px; margin: 8px 0 0 8px; }
+.cover-text-mode { background: radial-gradient(ellipse at 80% 20%, #ffdce8, transparent 60%), linear-gradient(130deg, #e5effe, #fff9e9); }
+#notes > .bar h2 i { display: inline-block; font: italic clamp(17px, 2.6vw, 28px) Georgia, serif; font-weight: 400; color: #637692; margin-left: 10px; }
+.notes-section-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin: 24px 0 16px; }
+.notes-section-head h3 { font-size: clamp(24px, 3.5vw, 34px); margin: 5px 0 0; }
+.notes-section-head > span { color: #6a7b93; font-size: 12px; }
+.notes-section-head button { flex-shrink: 0; border-radius: 999px; background: #ffffffa1; border-color: #fff; padding: 8px 15px; font-size: 13px; }
+#pinnedLetters { margin: 0 0 44px; padding-bottom: 28px; border-bottom: 1px solid #00267616; }
+#letterHighlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 18px; }
+#letterHighlights .letter-card { padding: clamp(20px, 3vw, 34px); border: 1px solid #fff; border-radius: 30px; background: linear-gradient(#ffffffe8, #fff9f5d9), url('/zoediary/asset-floral-paper.jpg') center / cover; color: #770747; box-shadow: 0 10px 30px #6b29450c; }
+#letterHighlights .letter-card h3 { font-size: clamp(24px, 3.4vw, 36px); margin: 18px 0; max-width: 30ch; }
+#letterHighlights .envelope-mini { width: min(85%, 420px); height: auto; aspect-ratio: 1.9; }
+#letterHighlights .letter-card button { margin: 5px 8px 0 0; background: #ffffffa3; border: 1px solid #fff; border-radius: 999px; min-height: 44px; box-shadow: 0 4px 12px #77445b0d; }
+#entries article > time { display: block; font-size: 12px; color: #526887; margin-top: 5px; }
+#entries { grid-template-columns: minmax(0, 1fr); }
+#entries .article-prose { max-width: 78ch; }
+#entries .entry-excerpt { max-width: 78ch; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; line-clamp: 4; overflow: hidden; white-space: normal; }
+#entries article > button { margin-right: 8px; }
+/* Category pages follow the recording's middle-large, neighboring-small gallery. */
+#journalPage { min-height: calc(100svh - 180px); width: min(1360px, 96%); margin: 0 auto 60px; }
+#journalPage:focus, #notes:focus { outline: none; }
+.journal-active header { min-height: 60px; margin-top: 12px; padding: 9px 22px; }
+.journal-active header strong { font-size: 22px; }
+.journal-active header strong span { display: none; }
+.journal-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0 0; }
+.journal-nav > button { border-radius: 999px; font-size: 12px; background: #fff9; border-color: #fff; }
+#journalTabs { display: flex; justify-content: end; margin: 0; gap: 5px; }
+#journalTabs button { border: 0; border-radius: 999px; padding: 5px 12px; font-size: 12px; color: #526887; }
+#journalTabs button[aria-pressed=true] { color: #002676; background: #fff; box-shadow: 0 2px 8px #0026760c; }
+.journal-heading { text-align: center; padding: 10px 12px 2px; }
+.journal-heading > small { text-transform: uppercase; letter-spacing: .18em; font-size: 11px; color: #6b7e99; }
+.journal-heading h1 { margin: 7px 0 8px; font-size: clamp(30px, 4vw, 42px); font-weight: 600; letter-spacing: -.04em; }
+.journal-heading p { margin: 0 auto; font-size: 13px; max-width: 42ch; color: #6b7e99; }
+#classTopics { margin: 12px auto 0; display: flex; justify-content: center; gap: 10px; padding: 0 12px; }
+#classTopics button { padding: 10px 22px; display: flex; align-items: center; gap: 10px; border: 1px solid #fff; background: #fff8; border-radius: 999px; }
+#classTopics span { font-size: 14px; }
+#classTopics small { font-size: 11px; color: #6b7e99; }
+#classTopics button[aria-pressed=true] { background: #002676; border-color: #002676; color: #fff; }
+#classTopics button[aria-pressed=true] small { color: #ffe88d; }
+#journalGallerySection { margin: 0; }
+#journalGallery { --journal-poster-width: min(420px, 64vw, 40svh); position: relative; overflow-x: auto; overflow-y: hidden; height: calc(var(--journal-poster-width) * 1.333 + 120px); scrollbar-width: none; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; }
+#journalGallery::-webkit-scrollbar { display: none; }
+#journalGallery:focus-visible { outline: 2px solid #426799; outline-offset: 2px; border-radius: 10px; }
+#journalGallery.is-dragging { scroll-snap-type: none; cursor: grabbing; }
+.journal-rail { height: 100%; position: relative; }
+.journal-stage { height: 100%; position: sticky; left: 0; }
+.journal-snap { position: absolute; top: 0; width: 1px; height: 1px; scroll-snap-align: start; pointer-events: none; }
+.journal-card { position: absolute; top: 50%; left: 50%; margin: 0; width: var(--journal-poster-width); transform-origin: center 43%; }
+.journal-poster { display: block; position: relative; width: 100%; aspect-ratio: 3 / 4; padding: 0; margin: 0; border: 0; border-radius: 3px; overflow: hidden; background: #dce5f0; cursor: pointer; transition: none; box-shadow: none; }
+.journal-poster img { display: block; width: 100%; height: 100%; object-fit: cover; user-select: none; pointer-events: none; }
+.journal-poster:hover { transform: none; background: #dce5f0; }
+.journal-poster:focus-visible { outline: 3px solid #c09748; outline-offset: 5px; }
+.poster-cover-words { position: absolute; inset: auto 0 0; padding: 28px 22px 22px; background: linear-gradient(0deg, #ffffffed, #ffffffa6 78%, #ffffff00); color: #18395f; text-align: left; }
+.poster-cover-words h3 { margin: 0; font-size: clamp(22px, 2.5vw, 32px); line-height: 1.3; overflow-wrap: anywhere; }
+.poster-cover-words p { font-size: 13px; line-height: 1.6; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.is-text-cover { background: radial-gradient(ellipse at 90% 15%, #fce2e9, transparent 64%), linear-gradient(140deg, #e1edff, #fff8e5); }
+.is-text-cover .poster-cover-words { inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 28px; background: none; }
+#editJournalCover { display: block; margin: 14px auto 0; border-radius: 999px; padding: 7px 18px; font-size: 12px; background: #fff9; border-color: #fff; }
+.journal-card figcaption { text-align: center; padding: 17px 0 0; transition: opacity 120ms linear; min-height: 76px; }
+.journal-card figcaption h2 { font: 500 16px/1.5 system-ui, sans-serif; margin: 0; overflow-wrap: anywhere; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+.journal-card figcaption p { font-size: 11px; color: #7b899b; margin: 4px 0 0; }
+.gallery-envelope { position: absolute; left: 10%; top: 38%; width: 80%; height: auto; aspect-ratio: 1.8; margin: 0; }
+.journal-gallery-controls { display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: -10px; position: relative; z-index: 2; }
+.journal-gallery-controls button { width: 42px; height: 42px; min-height: 0; padding: 0; border-radius: 50%; border: 1px solid #fff; background: #ffffff7d; }
+.journal-gallery-controls button:disabled { cursor: default; opacity: .3; transform: none; }
+#journalCount { min-width: 70px; text-align: center; font-size: 12px; color: #6b7e99; font-variant-numeric: tabular-nums; }
+.journal-hint { text-align: center; color: #7c8ba0; font-size: 11px; margin: 14px 0 0; }
+#journalEmpty { text-align: center; padding: 80px 20px 100px; }
+#journalEmpty h2 { font-size: 27px; font-weight: 500; }
+#journalEmpty p { color: #6b7e99; font: italic 19px Georgia, serif; }
+#journalEmpty button { border-radius: 999px; margin-top: 15px; }
+/* Full article contents keep the existing image wrapping and rich text. */
+#articleReader { width: min(820px, 94vw); max-height: 92dvh; border: 1px solid #fff; border-radius: 26px; padding: clamp(22px, 4vw, 50px); background: #fbfcfff8; }
+#articleReader::backdrop { background: #061a3d99; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.article-reader-toolbar { display: flex; align-items: start; justify-content: space-between; gap: 15px; }
+#articleCategory { font-size: 12px; color: #607693; max-width: 80%; }
+#closeArticle { width: 40px; height: 40px; min-height: 0; padding: 0; flex-shrink: 0; font-size: 24px; }
+#articleHeading { font-size: clamp(27px, 4vw, 43px); margin: 20px 0 14px; overflow-wrap: anywhere; }
+#articleDate { font-size: 12px; color: #6b7e99; margin-bottom: 30px; }
+#articleBody { font-size: 17px; line-height: 1.9; }
+.article-reader-actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding-top: 26px; margin-top: 30px; border-top: 1px solid #00267619; }
+.article-reader-actions button { font-size: 13px; }
+.article-reader-actions button:disabled { opacity: .3; cursor: default; transform: none; }
+@media(max-width: 650px) {
+  .cover-copy { width: 100%; padding: 22px; border-radius: 22px; }
+  .cover-with-photo h2 { font-size: clamp(38px, 10vw, 62px); }
+  .cover-with-photo { padding: 22px 18px; align-items: flex-end; }
+  .cover-with-photo::after { background: linear-gradient(0deg, #ffffff35, #ffffff05); }
+  .cover-copy > small { margin-bottom: 22px; font-size: 10px; }
+  .cover-copy > span { font-size: 27px; }
+  .cover-with-photo p { font-size: 14px; }
+  #notes > .bar h2 i { display: block; margin: 8px 0 0; }
+  .notes-section-head { align-items: center; gap: 10px; }
+  .notes-section-head > span { max-width: 92px; text-align: right; }
+  #letterHighlights .letter-card { border-radius: 24px; }
+  #pinnedLetters { margin-bottom: 30px; }
+  #journalPage { width: 100%; }
+  .journal-nav { align-items: start; flex-direction: column; padding: 22px 5% 12px; gap: 12px; }
+  #journalTabs { justify-content: start; gap: 2px; }
+  #journalTabs button { padding: 5px 9px; font-size: 11px; }
+  .journal-heading { padding-top: 12px; }
+  #classTopics { gap: 7px; padding: 0 16px; }
+  #classTopics button { flex-direction: column; gap: 0; padding: 10px 14px; }
+  #classTopics span { font-size: 12px; }
+  #classTopics small { font-size: 10px; }
+  #journalGallery { --journal-poster-width: min(74vw, 35svh); }
+  .journal-card figcaption h2 { font-size: 14px; }
+  .journal-hint { font-size: 10px; }
+  #articleBody { font-size: 16px; }
+}
+@media(max-height: 560px) { #journalGallery { --journal-poster-width: min(210px, 48svh, 50vw); } }
+@media(prefers-reduced-motion: reduce) { .journal-card figcaption { transition: none; } }
+
+/* Independent, cloud-saved cover editor. */
+#coverEditor { width: min(900px, 94vw); max-height: 93dvh; border: 1px solid #fff; border-radius: 28px; background: #f8fafffa; padding: clamp(20px, 3vw, 34px); }
+#coverEditor::backdrop { background: #15345580; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.cover-editor-head { display: flex; justify-content: space-between; align-items: start; gap: 18px; }
+.cover-editor-head h2 { font-size: 30px; margin: 5px 0 0; }
+#closeCoverEditor { width: 40px; height: 40px; min-height: 0; padding: 0; font-size: 24px; }
+#coverForm > p { font-size: 12px; color: #607693; }
+.cover-editor-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); align-items: center; gap: 28px; margin: 24px 0; }
+#entryCoverPreview { width: min(100%, 280px); aspect-ratio: 3 / 4; position: relative; margin: 0 auto; overflow: hidden; border-radius: 10px; box-shadow: 0 8px 25px #1637591a; background-color: #e7eef7; }
+#entryCoverPreview > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+#coverForm label { font-size: 13px; color: #526887; }
+#coverForm input, #coverForm textarea, #coverForm select { border-radius: 12px; border-color: #ccdaea; background: #fff9; font-size: 14px; }
+#coverForm textarea { min-height: 82px; }
+#resetEntryCover { font-size: 12px; min-height: 36px; padding: 5px 12px; }
+#coverSaveStatus { min-height: 20px; }
+@media(max-width: 650px) {
+  .cover-editor-layout { grid-template-columns: 1fr; gap: 18px; }
+  #entryCoverPreview { width: 180px; }
+  .cover-editor-head h2 { font-size: 26px; }
+}
+/* An illustrated correspondence gallery, without photographic poster backdrops. */
+.letter-artwork { display: block; width: 100%; height: auto; overflow: visible; pointer-events: none; }
+#journalPage[data-category="letters"] #journalGallery { --journal-poster-width: min(560px, 82vw, 65svh); height: calc(var(--journal-poster-width) * .71 + 130px); }
+.journal-poster.is-letter-cover, .journal-poster.is-letter-cover:hover, #entryCoverPreview.is-letter-cover { aspect-ratio: 1.425; background: transparent; border: 0; border-radius: 0; overflow: visible; box-shadow: none; }
+#letterHighlights .letter-card { background: linear-gradient(135deg, #fffdf8d9, #f2f6f3b3); color: #655e55; }
+#letterHighlights .letter-artwork { width: min(100%, 440px); margin: 4px auto; }
+.letter-sender { margin: 10px 0 0; color: #807765; font: italic 15px/1.7 Georgia, "Noto Serif SC", serif; overflow-wrap: anywhere; }
+#letterReader .envelope-back { background: linear-gradient(145deg, #f2e8d3, #e3d7bd); border: 1px solid #ccbea1; }
+#letterReader .envelope-front { background: linear-gradient(155deg, #fff9e9, #f0e5cc); border-radius: 4px 7px 5px 3px; border: 1px solid #d6c7aa; }
+#letterReader .envelope-front::before { background: repeating-linear-gradient(0deg, #e8bdb988 0 10px, #f0cecb88 10px 20px), repeating-linear-gradient(90deg, #e9bdb9 0 10px, #f3d7d0 10px 20px); filter: drop-shadow(0 2px 1px #b1a08045); }
+#letterReader .tear-strip, #letterReader .tear-strip:hover, #letterReader .tear-strip:active { background: linear-gradient(125deg, #faf3e2, #eee1c9); color: #8f7b5f; }
+#letterReader .paper-fold { background: linear-gradient(140deg, #fffcf2, #f9f1e0); }
+#letterReader .letter-content { background: linear-gradient(150deg, #fffdf5, #f9f2e5); border-color: #d5c8af; box-shadow: inset 0 0 28px #bca47a0a, 0 12px 26px #52354e12; }
+#letterReader .wax-seal { background: none; color: #c67c7c; border: 0; border-radius: 0; box-shadow: none; text-shadow: 0 2px 1px #8a514540; font-size: 44px; }
+#letterReader .envelope-scene { margin-top: 42px; }
+@media(max-width:650px) {
+  #journalPage[data-category="letters"] #journalGallery { --journal-poster-width: min(510px, 86vw); }
+  .letter-sender { font-size: 13px; }
+}
+#letterReader .envelope-front { cursor: pointer; }
+.letter-art-caption { text-align: center; padding: 6px 10px; }
+.letter-art-caption h3 { font-size: 20px; margin: 0; }
+.letter-art-caption p { font-size: 13px; margin: 5px 0; }
+/* Vintage tickets keep the card's title and opening paragraph unobstructed. */
+#entries article { position: relative; isolation: isolate; }
+.entry-ticket { display: block; width: clamp(125px, 18vw, 178px); height: auto; margin: -4px -8px 14px auto; rotate: 5deg; filter: drop-shadow(0 3px 2px #5a463c1a); pointer-events: none; }
+#entries article > small, #entries article > time, #entries article > h3 { position: relative; z-index: 1; }
+#entries article > button { margin-right: 8px; margin-top: 5px; }
+.gallery-delete-entry { margin: 8px 0 0; padding: 3px 12px; font-size: 11px; color: #935c5b; border-color: #d9c5bf; border-radius: 999px; }
+#deleteLetterEntry, #deleteArticleEntry { color: #935c5b; }
+#deleteLetterEntry { display: block; margin: 20px 0 0 auto; font-size: 13px; }
+#entryTrash { width: min(760px, 94vw); }
+#entryTrashList { display: grid; gap: 14px; }
+#entryTrashList article { padding: 18px 22px; background: #f2efe5; }
+#entryTrashList h3 { font-size: 20px; margin: 8px 0 12px; }
+#entryDeleteTitle { font-family: Georgia, 'Noto Serif SC', serif; font-size: 21px; overflow-wrap: anywhere; }
+#letterReader .letter-content { position: relative; isolation: isolate; min-height: 260px; padding-top: 65px; }
+.paper-ornament { position: absolute; width: 110px; height: 70px; right: 14px; top: -22px; pointer-events: none; }
+.paper-ornament svg { width: 100%; height: 100%; display: block; }
+#letterReader[data-stationery="0"] .letter-content { border: 0; border-left: 8px solid #dec5be; border-radius: 3px 7px 6px 3px; background: repeating-linear-gradient(0deg, #bba68a12 0 1px, transparent 1px 31px), linear-gradient(120deg,#fffbee,#f7efdd); box-shadow: -12px 11px 0 #b7716e20, 0 8px 25px #806b4a18; }
+#letterReader[data-stationery="1"] .letter-content { border: 2px solid #b2c09a; border-radius: 28px 8px 26px 10px; background: linear-gradient(#fffdf0e8,#fffdf0e8), repeating-conic-gradient(#d6e0bd 0% 25%,#eef1db 0% 50%) 0 0 / 26px 26px; color: #57604c; }
+#letterReader[data-stationery="2"] .letter-content { border: 0; border-bottom: 3px dashed #c6b799; border-radius: 2px; background: repeating-linear-gradient(0deg,#b89f7b20 0 1px,transparent 1px 31px), #f7efdb; box-shadow: -10px 9px 0 #d4bf9626, 0 8px 24px #806b4a15; }
+#letterReader[data-stationery="3"] .letter-content { border: 1px solid #c8d2d9; border-left: 10px solid #b6c8d2; border-radius: 8px 3px 14px 2px; background: repeating-linear-gradient(0deg,#8eaab21a 0 1px,transparent 1px 31px), #f7faf7; color: #4f6370; box-shadow: 9px 11px 0 #c3b4bf1f; }
+#letterReader[data-stationery="4"] .letter-content { border: 7px solid #c69b62; border-top-width: 12px; border-radius: 54px 54px 15px 15px; background: repeating-linear-gradient(0deg,#a88e6220 0 1px,transparent 1px 32px), radial-gradient(ellipse at 50% 15%,#fff3cf,#fae6b8); color: #765b3d; }
+#letterReader[data-stationery="5"] .letter-content { border: 4px solid #b86859; border-radius: 34px 28px 38px 30px; background: repeating-linear-gradient(0deg,#ab8b6b1b 0 1px,transparent 1px 31px),#fff6e4; color: #775345; }
+#letterReader .letter-content h3 { padding-right: 10px; }
+@media(max-width:650px) { .entry-ticket { width: 135px; margin-bottom: 10px; } #letterReader .letter-content { padding: 45px 22px 26px; } .paper-ornament { width: 88px; height: 56px; } .gallery-delete-entry { min-height: 30px; } }
+#entries .entry-ticket { float: right; margin-left: 18px; }
+#entries article::after { content: ''; display: block; clear: both; }
+#letterReader[data-envelope="1"] .envelope-front { background: #e9f1ee; border: 7px dashed #7e9eae; }
+#letterReader[data-envelope="1"] .envelope-front::before { background: linear-gradient(140deg,#eef2e8,#ccdae0); }
+#letterReader[data-envelope="2"] .envelope-front { background: linear-gradient(145deg,#e5ebd9,#d2dfc6); }
+#letterReader[data-envelope="2"] .envelope-front::before { background: #eef0df; }
+#letterReader[data-envelope="3"] .envelope-front { background: linear-gradient(140deg,#bf6e61,#9d504b); color: #fff0d8; }
+#letterReader[data-envelope="3"] .envelope-front::before { background: repeating-conic-gradient(#eddbbc 0% 25%,#e4c6b0 0% 50%) 0 0 / 18px 18px; }
+#letterReader[data-envelope="4"] .envelope-front { background: #d7ba92; }
+#letterReader[data-envelope="4"] .envelope-front::before { background: #eedfc1; }
+#letterReader[data-envelope="5"] .envelope-front { background: #d8e5ed; }
+#letterReader[data-envelope="5"] .envelope-front::before { background: #f3e9ce; }
+#letterReader[data-envelope="6"] .envelope-front { background: #fffcf2; }
+#letterReader[data-envelope="6"] .envelope-front::before { background: #eee9da; }
+#letterReader[data-envelope="6"] .wax-seal { color: #ad915d; }
+#letterReader[data-envelope="7"] .envelope-front { background: #f0d9d1; }
+#letterReader[data-envelope="7"] .envelope-front::before { background: #ecdfc5; }
+@media(max-width:650px) { #entries .entry-ticket { width: 110px; margin-left: 12px; } }
